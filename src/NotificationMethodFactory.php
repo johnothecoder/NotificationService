@@ -15,14 +15,18 @@ namespace JohnoTheCoder\NotificationService;
  */
 class NotificationMethodFactory
 {
+    protected $methodNamespace = '';
     public function getMethod(Notification $notification)
     {
         $preferredMethod = $notification->getRecipient()->getPreferredMethod($notification->getContext());
-        return self::buildContext($preferredMethod, $notification->getNamespace());
+        if(empty($preferredMethod)){
+            $preferredMethod = $notification->getDefaultMethod();
+        }
+        return self::buildContext($preferredMethod);
     }
-    protected static function buildContext($context)
+    protected function buildContext($context)
     {
-        $class = 'NotificationMethod' . ucwords($context);
-        return new $class();
+        $className = $this->methodNamespace . '\\NotificationMethod' . ucwords($context);
+        return new $className();
     }
 }
