@@ -1,0 +1,25 @@
+{
+  "name": "johnothecoder/notificationservice",
+  "description": "Boilerplate for creating a notification service",
+  "keywords": ["Notification"],
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Matt Johnson, a.k.a JohnoTheCoder",
+      "email": "mattjohnsonuk@icloud.com"
+    }
+  ],
+  "type": "project",
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload":{
+    "psr-4":{
+      "autoload":{
+        "psr-4":{
+          "JohnoTheCoder\\NotificationService\\":"src/"
+        }
+      }
+    }
+  }
+}
