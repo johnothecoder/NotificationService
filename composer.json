@@ -3,6 +3,7 @@
   "description": "Boilerplate for creating a notification service",
   "keywords": ["Notification"],
   "license": "GNU",
+  "homepage": "https://johnothecoder.wordpress.com/notification-service",
   "authors": [
     {
       "name": "Matt Johnson, a.k.a JohnoTheCoder",
@@ -17,5 +18,6 @@
     "psr-4": {
       "JohnoTheCoder\\NotificationService\\": ""
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
